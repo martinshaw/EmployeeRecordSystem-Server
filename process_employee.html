@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Add Employee - Employee Record System</title>
+	<script>
+
+	window.onload = function(e){
+		
+		document.getElementsByClassName("action-btn")[0].addEventListener("click", function(){
+			document.location = "/";
+		});
+		​
+	}
+
+	</script>
+	<style>
+
+		html, body{
+			margin: 0;
+			padding: 0;
+			background: #eee;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: sans-serif;
+			overflow: hidden;
+		}
+
+		.container{
+			width: 50%;
+			height: 60%;
+			background: #fff;
+			margin: 0;
+			padding: 0;
+			/*padding: 10px;*/
+			box-shadow: 0 3px 15px #aaa;
+			border-radius: 3px;
+			position: relative;
+			transform: none;
+		}
+
+		h1{
+			margin: 0;
+			padding: 0;
+			padding: 18px 0;
+			text-align: center;
+			font-weight: 100;
+			font-size: 1.9em;
+			color: #666;
+		}
+
+		form{
+			padding: 15px;
+		}
+
+		.column{
+			width: 50%;
+			float: left;
+			display: block;
+		}
+		
+		.input-cont{
+			/*margin: 0 10px;*/
+			padding: 5px 0 ;
+		}
+
+		label{
+			width: 100%;
+			width: calc(100% - 20px);
+			font-size: 9pt;
+			font-weight: 700;
+			margin: 0 10px;
+		}
+
+		input{
+			width: 100%;
+			width: calc(100% - 20px);
+			padding: 7px 0px;
+			outline: none;
+			border: none;
+			border-bottom: 1px solid #aaa;
+			margin: 0 10px;
+			font-size: 14pt;
+		}
+
+		input:active, input:focus{
+			border-bottom: 1px solid black;
+		}
+
+		.buttons{
+			width: 100%;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;	
+		}
+
+		.buttons .action-btn{
+			padding: 15px;
+			/*width: 50%;*/
+			width: 100%;
+			float: left;
+			background: none;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+
+		.buttons .action-btn:hover{
+			background: #eee;
+		}
+		
+		footer{
+			position: absolute;
+			bottom: 15px;
+			text-align: center;
+			width: 100%;
+			height: 16px;
+			font-size: 12pt;
+			font-weight: 700;
+			color: #999;
+		}
+
+
+
+
+		*{
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		input, button{
+			-webkit-user-select: text;
+			-moz-user-select: text;
+			-ms-user-select: text;
+			user-select: text;
+			
+		}
+
+
+		@media all and (max-width: 1000px) {
+			.container{
+				width: 80%;
+				height: 60%;
+			}
+		}
+		@media all and (max-width: 750px) {
+			.container{
+				width: 100%;
+				height: 100%;
+			}
+			footer{
+				display: none;
+			}
+		}
+		@media all and (max-height: 776px) {
+			.container{
+				width: 100%;
+				height: 100%;
+			}
+			footer{
+				display: none;
+			}
+		}
+
+
+		@keyframes submitted {
+		    0% {
+				transform: scale(1);
+		    }
+		    25% {
+				transform: scale(0.6);
+				margin-bottom: 0;
+		    }
+		    100% {
+		    	margin-bottom: 3000px;
+				transform: scale(0.6);
+		    	display: none;
+		    }
+		}
+
+		.container.sent{
+		    animation: submitted 1s linear forwards;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<br/><br/><br/>
+		<h1>Employee Added!</h1>
+		
+		<a href="/">
+		<div class="buttons">
+			<button class="action-btn">Return to view all Employee Records</button>
+		</div>
+		</a>
+	</div>	
+
+	<footer>
+		Employee Record System
+	</footer>
+
+</body>
+</html>
